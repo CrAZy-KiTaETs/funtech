@@ -1,0 +1,208 @@
+@use 'sass:math';
+
+// COLORS
+$white: #fff;
+$black: #000;
+$black-text: #141416;
+$gray: #d7d7d7;
+$gray-text: #676767;
+$another-fucking-gray: #848586;
+
+// BORDER RADIUS (r - radius)
+
+$r-s: 12px;
+$r-full: 100%;
+
+// ОТСТУПЫ МЕЖДУ БЛОКОВ (i - indent)
+
+$i-22: 22px;
+$i-24: 24px;
+$i-28: 28px;
+$i-44: 44px;
+$i-70: 70px;
+
+// PADDING (внутренние отступы)
+
+$p-2: 2px;
+$p-6: 6px;
+$p-8: 8px;
+$p-10: 10px;
+$p-12: 12px;
+$p-14: 14px;
+$p-16: 16px;
+$p-18: 18px;
+$p-20: 20px;
+$p-24: 24px;
+$p-30: 30px;
+$p-32: 32px;
+$p-36: 36px;
+$p-40: 40px;
+$p-48: 48px;
+$p-54: 54px;
+$p-64: 64px;
+$p-64: 64px;
+
+// FONT
+
+$f-7xl: 4.75rem; // 76px
+$f-6xl: 4.5rem; // 72px
+$f-5xl: 3.75rem; // 60px
+$f-4xl: 3rem; // 48px
+$f-3xl: 2.25rem; // 36px
+$f-2xl: 1.875rem; // 30px
+$f-xl: 1.5rem; // 24px
+$f-x: 1.25rem; // 20px
+$f-l: 1.125rem; // 18px
+$f-m: 1rem; // 16px
+$f-s: 0.875rem; // 14px
+$f-xs: 0.75rem; // 12px
+
+$inter: 'Inter', sans-serif;
+$public-sans: 'PublicSans', sans-serif;
+
+// РАЗМЕРЫ
+$pc: 1440px;
+$laptop-big: 1280px;
+$laptop: 1023px;
+$tablet-big: 960px;
+$tablet: 768px;
+$tablet-min: 640px;
+$mobile-big: 525px;
+$mobile: 426px;
+$mobile-mid: 375px;
+$mobile-min: 350px;
+
+// Transition
+$transition: 0.3s ease;
+
+@mixin break($size) {
+  @media (max-width: #{$size}) {
+    @content;
+  }
+}
+
+@mixin break-height($size) {
+  @media (max-height: #{$size}) {
+    @content;
+  }
+}
+
+@mixin break-min($size) {
+  @media (min-width: #{$size}) {
+    @content;
+  }
+}
+
+@mixin between($max, $min) {
+  @media (max-width: #{$max}) and (min-width: #{$min}) {
+    @content;
+  }
+}
+
+@mixin pc() {
+  @include break($pc) {
+    @content;
+  }
+}
+
+@mixin laptop-big() {
+  @include break($laptop-big) {
+    @content;
+  }
+}
+
+@mixin laptop() {
+  @include break($laptop) {
+    @content;
+  }
+}
+
+@mixin tablet-big() {
+  @include break($tablet-big) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @include break($tablet) {
+    @content;
+  }
+}
+
+@mixin tablet-min() {
+  @include break($tablet-min) {
+    @content;
+  }
+}
+
+@mixin mobile-big() {
+  @include break($mobile-big) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @include break($mobile) {
+    @content;
+  }
+}
+
+@mixin mobile-mid {
+  @include break($mobile-mid) {
+    @content;
+  }
+}
+
+@mixin mobile-min {
+  @include break($mobile-min) {
+    @content;
+  }
+}
+
+@mixin hover {
+  // нужно чтобы отрубить hover на устройствах с сенсорным экраном
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+
+// ИСПОЛЬЗУЕТСЯ ТАК
+// @include hover {
+//   &:hover {
+//     svg {
+//       rotate: 45deg;
+//     }
+//   }
+// }
+
+// FUNCTIONS
+
+@function rem($px) {
+  $result: math.div($px, 16) + rem;
+
+  @return $result;
+}
+
+@function em($px) {
+  $result: math.div($px, 16) + em;
+
+  @return $result;
+}
+
+%visually-hidden {
+  all: unset;
+
+  position: absolute;
+
+  overflow: hidden;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+
+  white-space: nowrap;
+
+  clip: rect(0, 0, 0, 0);
+}

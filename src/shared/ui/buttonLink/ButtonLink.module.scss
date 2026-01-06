@@ -1,0 +1,69 @@
+.small {
+  padding: 14.5px 24.5px;
+  border-radius: $r-s;
+
+  font-size: $f-s;
+  line-height: 1.5;
+  letter-spacing: 0.12px;
+}
+
+.medium {
+  padding: $p-18 $p-24;
+  border-radius: $r-s;
+  font-weight: 500;
+  letter-spacing: 1%;
+
+  @include pc {
+    padding: 12.5px 16px;
+    font-size: 12px;
+  }
+}
+
+.buttonLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  transition: 0.3s ease;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+}
+
+.primary {
+  border: 2px solid $black;
+  color: $white;
+  background: $black;
+
+  &:hover {
+    color: $black;
+    background: $white;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+
+  @include tablet-min {
+    border: 1px solid $black;
+  }
+}
+
+.secondary {
+  border: 2px solid $black;
+  color: $black;
+  background: $white;
+
+  &:hover {
+    background: $gray;
+  }
+
+  @include tablet-min {
+    border: 1px solid $black;
+  }
+}
