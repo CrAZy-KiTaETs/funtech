@@ -67,3 +67,23 @@
     border: 1px solid $black;
   }
 }
+
+.text {
+  padding: 8px 20px;
+  border-radius: 10px;
+
+  font-size: 16px;
+  color: #606060;
+
+  transition: $transition;
+
+  @include hover {
+    &:hover {
+      background: #c3c3c3;
+    }
+  }
+
+  @include laptop {
+    font-size: 14px;
+  }
+}

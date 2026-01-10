@@ -214,8 +214,6 @@
   aspect-ratio: 16/ 9;
   width: 780px;
 
-  outline: 1px solid red;
-
   @include pc {
     right: -15%;
     scale: 0.7;
