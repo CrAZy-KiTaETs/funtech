@@ -53,24 +53,8 @@ export const NftSwiper = () => {
   useEffect(() => {
     const getItems = async () => {
       try {
-        // const res = await fetch('https://api.coingecko.com/api/v3/nfts/list');
-        // const data: { name: string }[] = await res.json();
-
-        const data = [
-          { name: 'CryptoPunk #3100' },
-          { name: 'Bored Ape Yacht Club #8817' },
-          { name: 'Art Blocks #1234' },
-          { name: 'Cool Cat #5678' },
-          { name: 'Meebits #91011' },
-          { name: 'World of Women #1213' },
-          { name: 'Doodles #1415' },
-          { name: 'Azuki #1617' },
-          { name: 'Azuki #1617' },
-          { name: 'Azuki #1617' },
-          { name: 'Azuki #1617' },
-          { name: 'Azuki #1617' },
-          { name: 'Azuki #1617' },
-        ];
+        const res = await fetch('https://api.coingecko.com/api/v3/nfts/list');
+        const data: { name: string }[] = await res.json();
 
         if (Array.isArray(data)) {
           data.splice(30);

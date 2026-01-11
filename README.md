@@ -1,5 +1,6 @@
 # Funtech-test
 
+Ссылка на приложение с тестовыми данными
 https://crazy-kitaets.github.io/funtech/
 
 ## Инструкция по запуску
