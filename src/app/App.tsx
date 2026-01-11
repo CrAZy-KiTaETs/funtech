@@ -1,5 +1,6 @@
+import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
-import { Hero } from '@components/sections';
+import { Banner, Hero, Nft } from '@components/sections';
 
 export default function App() {
   return (
@@ -7,6 +8,9 @@ export default function App() {
       <Header />
       <main>
         <Hero />
+        <Nft />
+        <Banner />
+        <Footer />
       </main>
     </>
   );

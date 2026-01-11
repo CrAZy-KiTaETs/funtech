@@ -2,7 +2,7 @@ import type { MotionProps } from 'framer-motion';
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react';
 
 type TButtonLinkProps = MotionProps & {
-  variant?: 'primary' | 'secondary' | 'text';
+  variant?: 'primary' | 'secondary' | 'third' | 'text';
   size?: 'none' | 'small' | 'medium' | 'large';
 };
 

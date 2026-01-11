@@ -1,0 +1,163 @@
+.swiper {
+  padding: 70px 32px;
+
+  @include pc {
+    padding: 50px 32px;
+  }
+}
+
+.slide {
+  display: grid;
+  grid-area: 1fr 1fr / 1fr auto;
+  grid-template-areas:
+    'image image'
+    'h3 h3'
+    'bid button';
+  gap: 20px;
+  align-items: center;
+
+  height: auto;
+  padding: 14px;
+  border-radius: 24px;
+
+  background: white;
+  box-shadow: 28.5px 9px 45px 0 #c7c7c799;
+
+  h3 {
+    grid-area: h3;
+
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #000;
+  }
+
+  @include pc {
+    gap: 14px;
+    padding: 10px;
+    border-radius: 18px;
+  }
+}
+
+.image {
+  grid-area: image;
+
+  aspect-ratio: 1/1;
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+
+  object-fit: cover;
+}
+
+.bidWrapper {
+  grid-area: bid;
+  align-self: center;
+}
+
+.bidText {
+  font-size: 14px;
+  font-weight: 400;
+  color: #94a3b8;
+
+  @include pc {
+    font-size: 11px;
+  }
+}
+
+.bidValue {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+
+  margin-top: 3px;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+
+  @include pc {
+    font-size: 14px;
+  }
+}
+
+.counter {
+  position: absolute;
+  top: 28px;
+  right: 25px;
+
+  gap: 12px;
+
+  padding: 10px 14px;
+  border: 1px solid #1c1d2014;
+  border-radius: 10px;
+
+  color: white;
+
+  background: #1c1d2059;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4.71px 14.12px 0 #1c1d2014;
+
+  @include pc {
+    top: 20px;
+    right: 20px;
+    padding: 7px 10px;
+    font-size: 11px;
+  }
+
+  @include tablet {
+    font-size: 10px;
+  }
+}
+
+.button {
+  grid-area: button;
+  place-self: center flex-end;
+
+  width: fit-content;
+
+  font-weight: 600;
+  letter-spacing: 0.12px;
+}
+
+.navigation {
+  display: flex;
+  gap: 30px;
+
+  width: fit-content;
+  margin: 0 auto;
+  padding: 20px 28px;
+  border-radius: 18px;
+
+  background: white;
+  box-shadow: 0 43.12px 34.49px -25.87px #0f0f0f1f;
+
+  button {
+    width: 24px;
+    height: 24px;
+  }
+
+  @include pc {
+    padding: 15px 21px;
+    border-radius: 13px;
+
+    button {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+.divider {
+  width: 2px;
+  height: 24px;
+  background: #e6e8ec;
+
+  @include pc {
+    height: 18px;
+  }
+}
+
+.nextButton {
+  transform: rotate(180deg);
+}

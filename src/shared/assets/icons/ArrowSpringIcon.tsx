@@ -1,7 +1,8 @@
+import type { MotionProps } from 'framer-motion';
 import { motion } from 'framer-motion';
 import type { SVGProps } from 'react';
 
-export const ArrowSpringIcon = (props: SVGProps<SVGSVGElement>) => {
+export const ArrowSpringIcon = (props: SVGProps<SVGSVGElement> & MotionProps) => {
   return (
     <motion.svg
       width="131"

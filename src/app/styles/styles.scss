@@ -1,9 +1,5 @@
 @use 'vars' as *;
 
-:root {
-  --font-gilroy: 'Gilroy', sans-serif;
-}
-
 @font-face {
   font-family: Inter;
   font-weight: 400;
@@ -67,7 +63,7 @@ html {
 }
 
 main {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 h1,
