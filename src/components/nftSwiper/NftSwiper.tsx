@@ -10,7 +10,6 @@ import S from './NftSwiper.module.scss';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { data } from 'framer-motion/client';
 
 interface NftItem {
   name: string;
