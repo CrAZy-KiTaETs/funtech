@@ -10,6 +10,7 @@ import S from './NftSwiper.module.scss';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
+import { data } from 'framer-motion/client';
 
 interface NftItem {
   name: string;
@@ -20,7 +21,7 @@ interface NftItem {
 
 const swiperSettings: SwiperOptions = {
   spaceBetween: 32,
-  slidesPerView: 1.2,
+  slidesPerView: 1.4,
   pagination: { clickable: true, dynamicBullets: true },
   centeredSlides: true,
   navigation: {
@@ -34,13 +35,15 @@ const swiperSettings: SwiperOptions = {
   loop: true,
   initialSlide: 1,
   breakpoints: {
-    376: { slidesPerView: 1.4 },
     526: { slidesPerView: 1.5 },
     601: { slidesPerView: 2 },
     769: { slidesPerView: 3 },
     1025: { slidesPerView: 3.5 },
     1281: { slidesPerView: 4 },
     1441: { slidesPerView: 4.6, spaceBetween: 40 },
+    1921: { slidesPerView: 6, spaceBetween: 40 },
+    2000: { slidesPerView: 6, spaceBetween: 40 },
+    2561: { slidesPerView: 8, spaceBetween: 40 },
   },
   modules: [Navigation, Autoplay] as SwiperModule[],
 };
@@ -63,10 +66,15 @@ export const NftSwiper = () => {
           { name: 'World of Women #1213' },
           { name: 'Doodles #1415' },
           { name: 'Azuki #1617' },
+          { name: 'Azuki #1617' },
+          { name: 'Azuki #1617' },
+          { name: 'Azuki #1617' },
+          { name: 'Azuki #1617' },
+          { name: 'Azuki #1617' },
         ];
 
         if (Array.isArray(data)) {
-          data.splice(10);
+          data.splice(30);
           const itemsWithDetails: NftItem[] = data.map((item) => ({
             name: item.name,
             image: getRandomImage(),

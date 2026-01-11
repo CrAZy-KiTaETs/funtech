@@ -31,10 +31,12 @@
   h1 {
     font-size: $f-7xl;
     line-height: rem(84);
+    letter-spacing: -3px;
 
     @include pc {
       font-size: rem(54);
       line-height: rem(62);
+      letter-spacing: -2px;
     }
 
     @include laptop {
@@ -54,12 +56,7 @@
   }
 
   @include tablet-min {
-    padding-top: 18px;
-
-    h1 {
-      font-size: rem(28);
-      line-height: rem(34);
-    }
+    padding-top: 20px;
   }
 }
 
@@ -144,18 +141,36 @@
 }
 
 .buttons {
-  display: grid;
-  grid-template-columns: 180px max-content;
+  display: flex;
   gap: $i-22;
 
   @include pc {
-    grid-template-columns: 130px max-content;
     gap: 16px;
+
+    a {
+      &:first-child {
+        padding: 12.5px 22px !important;
+      }
+
+      &:last-child {
+        padding: 12.5px 16px !important;
+      }
+    }
   }
 
   @include tablet-min {
-    grid-template-columns: 128px max-content;
+    grid-template-columns: auto auto;
     justify-content: center;
+
+    a {
+      &:first-child {
+        padding: 15px 21px !important;
+      }
+
+      &:last-child {
+        padding: 15px !important;
+      }
+    }
   }
 }
 
@@ -220,12 +235,14 @@
   }
 
   @include laptop {
-    right: -30%;
+    right: unset;
+    left: 25%;
     scale: 0.5;
   }
 
   @include tablet {
     right: -30%;
+    left: unset;
     scale: 0.4;
   }
 
@@ -238,7 +255,7 @@
     margin: 100px auto 0;
   }
 
-  @include mobile {
+  @include mobile-mid {
     transform-origin: center left;
     scale: 0.8;
   }

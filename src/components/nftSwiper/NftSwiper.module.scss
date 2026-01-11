@@ -1,13 +1,13 @@
 .swiper {
-  padding: 70px 32px;
+  padding: 70px 32px !important;
 
   @include pc {
-    padding: 50px 32px;
+    padding: 50px 32px !important;
   }
 }
 
 .slide {
-  display: grid;
+  display: grid !important;
   grid-area: 1fr 1fr / 1fr auto;
   grid-template-areas:
     'image image'
@@ -16,12 +16,12 @@
   gap: 20px;
   align-items: center;
 
-  height: auto;
+  height: auto !important;
   padding: 14px;
   border-radius: 24px;
 
   background: white;
-  box-shadow: 28.5px 9px 45px 0 #c7c7c799;
+  box-shadow: 28.5px 9px 45px #c7c7c799;
 
   h3 {
     grid-area: h3;
@@ -36,6 +36,14 @@
     gap: 14px;
     padding: 10px;
     border-radius: 18px;
+  }
+
+  @include mobile-mid {
+    grid-template-areas:
+      'image'
+      'h3'
+      'bid'
+      'button';
   }
 }
 
@@ -96,7 +104,7 @@
 
   background: #1c1d2059;
   backdrop-filter: blur(5px);
-  box-shadow: 0 4.71px 14.12px 0 #1c1d2014;
+  box-shadow: 0 4.71px 14.12px #1c1d2014;
 
   @include pc {
     top: 20px;
@@ -106,7 +114,7 @@
   }
 
   @include tablet {
-    font-size: 10px;
+    font-size: 10.5px;
   }
 }
 
@@ -118,6 +126,17 @@
 
   font-weight: 600;
   letter-spacing: 0.12px;
+
+  @include tablet {
+    padding: 11px 18px !important;
+    font-size: 10px;
+    line-height: 1.5;
+    letter-spacing: 0.09px;
+  }
+
+  @include mobile-mid {
+    place-self: unset;
+  }
 }
 
 .navigation {
@@ -130,7 +149,7 @@
   border-radius: 18px;
 
   background: white;
-  box-shadow: 0 43.12px 34.49px -25.87px #0f0f0f1f;
+  box-shadow: 0 40px 30px #0f0f0f1f;
 
   button {
     width: 24px;

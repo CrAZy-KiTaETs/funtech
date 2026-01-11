@@ -23,7 +23,12 @@
 
   @include pc {
     padding: 12.5px 16px;
+    border-radius: 8px;
     font-size: 12px;
+  }
+
+  @include tablet {
+    border-radius: 10px;
   }
 }
 
