@@ -1,5 +1,7 @@
 # Funtech-test
 
+https://crazy-kitaets.github.io/funtech/
+
 ## Инструкция по запуску
 
 ### Собираем докер
